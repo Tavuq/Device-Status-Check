@@ -50,11 +50,3 @@
         fetch("https://api.ipify.org?format=json").then(Response => Response.json()).then(data => {
             document.getElementById("IP").textContent = data.ip;
         });
-
-        if (ua.includes("Android" || "iPhone" || "iPad")) {
-            document.getElementById("power").textContent = "%" + navigator.getBattery();
-        }
-
-        else {
-            document.getElementById("power").textContent = "(Mobile Only)";
-        }
